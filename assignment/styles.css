@@ -99,11 +99,11 @@ a.home {
 }
 
 .editorial ul{
-  display: inline-block;
+  display: inline-block; /* Copied from https://www.reddit.com/r/Anki/comments/10hsccb/how_can_i_change_that_the_bullet_points_are_also/, not sure how inline-block makes the <li> elements move to center of page*/
   text-align: left;
-  padding-left: 550px;
-  padding-right: 550px;
-} /* Copied from https://www.reddit.com/r/Anki/comments/10hsccb/how_can_i_change_that_the_bullet_points_are_also/, I added the padding part, not sure how inline-block makes the <li> elements move to center of page*/
+  max-width: 900px;      /* adding this fixed the ul distortion issue when user zoom in and out */
+  margin: 16px auto; 
+} 
 
 #about {
   padding-bottom: 40px;
