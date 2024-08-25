@@ -97,7 +97,7 @@ a.home {
   text-align: left;
   padding-left: 550px;
   padding-right: 550px;
-} /* Copied from https://www.reddit.com/r/Anki/comments/10hsccb/how_can_i_change_that_the_bullet_points_are_also/, not totally sure how this works*/
+} /* Copied from https://www.reddit.com/r/Anki/comments/10hsccb/how_can_i_change_that_the_bullet_points_are_also/, I added the padding part, not totally sure how this works*/
 
 #about {
   padding-bottom: 40px;
