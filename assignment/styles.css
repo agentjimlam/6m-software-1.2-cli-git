@@ -1,7 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   background-color: #F2F2F2; /* shade of light grey */
+}
+
+img.avatar {
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+}
+
+img.country {
+  height: 100px;
+  width: 100px;
+  position: static;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.3em; 
+  text-transform: uppercase;
+}
+
+h2 {
+  /* padding: 40px 20px 0 20px; 
+  font-size: 24px; */
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
 }
 
 a {
@@ -20,7 +62,7 @@ a {
 }
 
 .header li {
-  display: inline-block; /* set nav header's <li> elements to be in line/next to each other */
+  display: inline-block; /* set nav header's <li> elements to be displayed horizontal. Unlike Inline, Inline-block does not add a line-break after the element, so the element can sit next to other elements.*/
   padding: 10px;
 }
 
@@ -33,29 +75,37 @@ a.home {
 }
 
 .header a:hover {
-  background-color: #ddd;
+  background-color: #ddd; /* when hover, light grey background appear */
   color: black;
 }
 
 /* Banner section */
 .banner {
   margin-top: 74px;
-  padding: 40px 0 100px 0;
+  padding: 40px 0 50px 0;
   background-color: #4D00FF;
 }
 
 
 /* Content section */
-.section {
+.editorial {
+  text-align: center;
 }
 
-#hobbies {
+.editorial ul{
+  display: inline-block; 
+  text-align: left;
+  padding-left: 550px;
+  padding-right: 550px;
+} /* Copied from https://www.reddit.com/r/Anki/comments/10hsccb/how_can_i_change_that_the_bullet_points_are_also/, not totally sure how this works*/
+
+#about {
   padding-bottom: 40px;
   color: #717171;
   /* font-family: 'Trebuchet MS', 'Times New Roman', serif; */
 }
 
-#about {
+#hobbies {
   padding-bottom: 40px;
   color: #717171;
   /* font-family: 'Trebuchet MS', 'Times New Roman', serif; */
@@ -66,3 +116,51 @@ a.home {
   color: #717171;
   /* font-family: 'Trebuchet MS', 'Times New Roman', serif; */
 }
+
+#education {
+  padding-bottom: 40px;
+  color: #717171;
+  /* font-family: 'Trebuchet MS', 'Times New Roman', serif; */
+}
+
+/* Color and Typography part */
+
+.bold {
+  font-weight: 900;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.italic {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.purple-text {
+  color: purple;
+}
+
+
+/* 
+https://stackoverflow.com/questions/1028248/how-to-combine-class-and-id-in-css-selector
+
+There are differences between #header .callout and #header.callout in css.
+
+Here is the "plain English" of #header .callout:
+Select all elements with the class name callout that are descendants of the element with an ID of header.
+
+And #header.callout means:
+Select the element which has an ID of header and also a class name of callout.
+*/
+
+/* On CSS selector for an img element with class...
+The selector img .myClass will select an element with a class of myClass that is a descendant of an img element. But since img elements can't contain descendant elements, that doesn't make sense.
+
+You want to select an img element with a class of myClass, therefore you need to remove the space:
+
+img.myClass:hover {
+  opacity:1;
+}
+*/
