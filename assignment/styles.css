@@ -6,6 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   background-color: #F2F2F2; /* shade of light grey */
+  max-width: 900px;
 }
 
 img.avatar {
@@ -53,7 +54,7 @@ a {
 }
 
 /* Navigation Header */
-.header {
+.navbar {
   position: fixed; /* make nav header element stay in the same place even if the page is scrolled */
   top: 0;
   width: 100%;
@@ -63,12 +64,16 @@ a {
   font-weight: 900;
 }
 
-.header li {
+.navbar ul{
+  list-style-type: none;
+}
+
+.navbar li {
   display: inline-block; /* set nav header's <li> elements to be displayed horizontal. Unlike Inline, Inline-block does not add a line-break after the element, so the element can sit next to other elements.*/
   padding: 10px;
 }
 
-.header a {
+.navbar a {
   color: #4A4A4A; /* sets the color of all anchor (<a>) tags within an element with the class 'header' to light grey shade */
 }
 
@@ -76,7 +81,7 @@ a.home {
   color: #4D00FF; /* sets the text color of any <a> element with the class 'home' to purple shade */
 }
 
-.header a:hover {
+.navbar a:hover {
   background-color: #ddd; /* when hover, light grey background appear */
   color: black;
 }
